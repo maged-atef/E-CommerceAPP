@@ -1,0 +1,13 @@
+.main_link a { 
+    text-decoration: none;
+}
+
+#out{
+    cursor: pointer;
+}
+ .count{
+
+    top: -15px;
+    left: 50%;
+    
+ }

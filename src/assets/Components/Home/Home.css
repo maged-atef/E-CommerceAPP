@@ -1,0 +1,13 @@
+.parent_press{ 
+overflow: hidden;
+}
+
+.press{ 
+    transform: translateX(200%);
+    transition: 0.5s ease-in-out;
+}
+
+.parent_press:hover .press{
+    transform: translateX(0);
+}
+
