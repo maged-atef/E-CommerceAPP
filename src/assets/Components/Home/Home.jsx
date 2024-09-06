@@ -68,7 +68,7 @@ export default function Home() {
                  <button className='btn btn-outline-primary m-1 fs-5 fw-bold ' onClick={() =>{
                       Add_Pro(product.id)
                     }}>+</button>
-                    <button className='btn btn-outline-danger fs-5 fw-bold ' onClick={() =>{showID(product.id)}}>-</button>
+                    
 
                     <NavLink onClick={ ()=> { Add_Wish(product.id)} } className="mx-2 list-unstyled fw-semibold " >
                     <i className='fa-solid fa-heart text-danger'></i></NavLink>
