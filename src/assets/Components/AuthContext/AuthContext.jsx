@@ -16,6 +16,7 @@ export default function AuthContext({children}) {
     const [ProductNo, setProductNo] = useState(0)
     const [wishno, setwishno] = useState(0)
     const [wishpro, setwishpro] = useState(null)
+    const [wishprice, setwishprice] = useState(0)
     const [category, setcategory] = useState(null)
 
 
@@ -43,6 +44,7 @@ const user_to = useNavigate();
         setProducts(success.data.data.products);
         localStorage.setItem("order_Cart", JSON.stringify(success.data.data))
         console.log(localStorage.getItem('order_Cart'))
+        toast.success("Added")
     
       }).catch((error) =>{
         console.log("error",error)
@@ -64,6 +66,11 @@ async function Add_Wish(id){
 
    ).then((success) =>{
        console.log(success)
+       toast.success(success.data.message)
+       console.log(success.data)
+       setwishno(success.data)
+       console.log(wishno)
+       setwishpro(success.data.data)
 
      
    }).catch((error) =>{
@@ -107,9 +114,15 @@ async function Remove_Wish(id){
   const response = axios.delete(`https://ecommerce.routemisr.com/api/v1/wishlist/${id}`, {
     headers: {token : localStorage.getItem('tkn')}
   }).then((sucess)=>{
-          console.log("sucess: ",sucess)
+          console.log("remove response: ",sucess)
           setwishno(sucess.data.count)
           setwishpro(sucess.data.data)
+          console.log("Sucess: ", sucess.data.count)
+          console.log("Sucess: ", sucess.data.data)
+          Get_UserWish()
+          toast.success("removed")
+          Get_UserWish()
+
 
   }).catch((erorr)=>{
       console.log("error: ",erorr)
@@ -144,7 +157,7 @@ async function Remove_Wish(id){
             settotalprice(sucess.data.data.totalCartPrice);
             setNo_item(sucess.data.numOfCartItems);
             setProducts(sucess.data.data.products);
-
+          toast.success('removed')
         
             console.log("total: ",totalprice)
             console.log("no items : ", No_item)
