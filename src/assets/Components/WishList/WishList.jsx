@@ -88,7 +88,7 @@ function HandleQtyChangedown(id ,qty){
                                                                </div> 
                                                                <NavLink  onClick={()=> {Add_Pro(item.id)}} className="mx-2 list-unstyled fw-semibold " >
                                                                <i className='fa-solid fa-cart-shopping text-success'></i></NavLink>
-                                                               <button className='btn btn-outline-danger' onClick={()=>{Remove_Wish(item.product._id)}}><i className="fas fa-trash-alt"></i></button>
+                                                               <button className='btn btn-outline-danger' onClick={()=>{Remove_Wish(item.id)}}><i className="fas fa-trash-alt"></i></button>
                                                                </div>
                                                                </div>
                                                           </div>
