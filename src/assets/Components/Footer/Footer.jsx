@@ -41,8 +41,8 @@ function Footer() {
           <div className="download d-flex gap-1 align-items-center gap-sm-3 flex-wrap">
             <h5>Get Deliveries with FreshCart</h5>
             <div>
-              <img src={downloadAppStore} alt="Download" style={{ width: "50%",height:"200px", maxWidth: "12rem" }} />
-              <img src={downloadGooglePlay} alt="Download" style={{ width: "50%",height:"200px", maxWidth: "12rem" }} />
+              <img src={downloadAppStore} alt="Download" style={{ width: "50%",height:"100px", maxWidth: "12rem" }} />
+              <img src={downloadGooglePlay} alt="Download" style={{ width: "50%",height:"100px", maxWidth: "12rem" }} />
             </div>
           </div>
         </div>
